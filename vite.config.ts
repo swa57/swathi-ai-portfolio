@@ -9,6 +9,10 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
+
+  // 👇👇 IMPORTANT: ADD THIS LINE FOR GITHUB PAGES 👇👇
+  base: "/swathi-ai-portfolio/",
+
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
   resolve: {
     alias: {
